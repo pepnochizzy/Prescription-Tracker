@@ -19,8 +19,7 @@
 
     <section id="leftToTake">
       <h2>Left to take</h2>
-      <div class="medName">
-        <!--This is a class name for now but might have to be an id depending on if we want all medicines to show in both sections. Can explain more in call if needed-->
+      <div id="notTakenmedName">
         <!-- for dom manipulation elements, names of medications will be appended to here -->
       </div>
       <div id="timeToTake">
@@ -30,7 +29,7 @@
 
     <section id="takenAlready">
       <h2>Taken Already</h2>
-      <div class="medName">
+      <div id="takenMedName">
         <!-- for dom manipulation elements, names of medications will be appended to here -->
       </div>
       <div id="timeTaken">
@@ -39,10 +38,11 @@
     </section>
 
     <section id="overview">
-      <div class="medName">
-        <!--This is where all medication names will go in a list and we have to create buttons and append those to each name for the dropdown feature-->
+      <h2>My Prescription Overview</h2>
+      <div id="medName">
+        <!--This is where all medication names will go in a list and we have to create buttons/anchors and append those to each name for the dropdown feature-->
       </div>
-      <div hidden>
+      <!-- <div hidden>
         <div id="nameColumn">
           <p>Name</p>
           <p id="nameColumnData"></p>
@@ -55,7 +55,9 @@
           <p>When to order</p>
           <p id="orderColumnData"></p>
         </div>
-      </div>
+      </div> 
+      This is what the dom manipulation will end up looking like for each medication dropdown. I have left this commented in but we can remove once we have done in JS
+      -->
     </section>
 
     <nav>
