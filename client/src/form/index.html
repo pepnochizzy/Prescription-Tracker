@@ -5,7 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./form.js" type="module" defer></script>
+    src="https://kit.fontawesome.com/12cfebba75.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Form</title>
   </head>
-  <body></body>
+  <body>
+    <form id="new-prescription-form">
+      <legend>Add a new prescription</legend>
+      <label for="medication-name">Name of medication: </label>
+      <input
+        type="text"
+        name="medication-name"
+        placeholder="This can be whatever you like - this is what will appear on alerts"
+        required
+      />
+      <label for="dosage">Dosage: </label>
+      <input type="number" name="dosage" required />
+      <label for="how-often">How often do you need to take it? </label>
+      <input type="text" name="how-often" required />
+      <label for="time-of-day"
+        >What time(s) of day do you need to take it?
+      </label>
+      <input type="time" name="time-of-day" placeholder="optional" />
+      <label for="re-order">How often do you need to re-order</label>
+      <input type="text" name="re-order" required />
+      <button type="submit">Add</button>
+    </form>
+
+    <nav>
+      <a id="home" href="#home" aria-label="home"
+        ><i class="fa-solid fa-house"></i>Home</a
+      >
+      <a id="newPost" href="#newPost" aria-label="new post"
+        ><i class="fa-solid fa-plus"></i>New Post</a
+      >
+      <a id="settings" href="#settings" aria-label="settings"
+        ><i class="fa-solid fa-gear"></i>Settings</a
+      >
+    </nav>
+  </body>
 </html>
