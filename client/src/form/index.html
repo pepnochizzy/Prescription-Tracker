@@ -12,19 +12,19 @@
     <title>Form</title>
   </head>
   <body>
-    <form id="new-prescription-form">
+    <form id="newPrescriptionForm">
       <legend>Add a new prescription</legend>
-      <label for="medication-name">Name of medication: </label>
+      <label for="medicationName">Name of medication: </label>
       <input
         type="text"
-        name="medication-name"
+        name="medicationName"
         placeholder="This can be whatever you like - this is what will appear on alerts"
         required
       />
       <label for="dosage">Dosage: </label>
       <input type="number" name="dosage" required />
-      <label for="how-often">How often do you need to take it? </label>
-      <select name="how-often" required>
+      <label for="howOften">How often do you need to take it? </label>
+      <select name="howOften" required>
         <option value="" disabled selected>Select an option:</option>
         <option value="daily">Daily</option>
         <option value="weekly">Weekly</option>
@@ -32,12 +32,12 @@
         <option value="two-weeks">Every 2 weeks</option>
         <option value="monthly">Monthly</option>
       </select>
-      <label for="time-of-day"
+      <label for="timeOfDay"
         >What time(s) of day do you need to take it?
       </label>
-      <input type="time" name="time-of-day" placeholder="optional" />
-      <label for="re-order">How often do you need to re-order</label>
-      <select name="re-order" required>
+      <input type="time" name="timeOfDay" placeholder="optional" />
+      <label for="reOrder">How often do you need to re-order</label>
+      <select name="reOrder" required>
         <option value="" disabled selected>Select an option:</option>
         <option value="weekly">Weekly</option>
         <option value="two-weeks">Every 2 weeks</option>
