@@ -12,12 +12,24 @@
     <title>Tracker</title>
   </head>
   <body>
-    <h1>Today's prescription</h1>
+    <section id="welcome">
+      <h1>Today's prescription</h1>
+      <button id="calender">Calender</button>
+    </section>
+
+    <section id="leftToTake">
+      <div id="medName">
+        <!-- for dom manipulation elements, names of medications will be appended to here -->
+      </div>
+      <div id="timeToTake">
+        <!-- for dom manipulation elements, time to take medicine will be appended in to here -->
+      </div>
+    </section>
     <nav>
       <a id="home" href="#home" aria-label="home"
         ><i class="fa-solid fa-house"></i>Home</a
       >
-      <a id="newPost" href="#newPost" aria-label="new post"
+      <a id="newPost" href="/client/src/form/index.html" aria-label="new post"
         ><i class="fa-solid fa-plus"></i>New Post</a
       >
       <a id="settings" href="#settings" aria-label="settings"
