@@ -23,13 +23,26 @@
       <label for="dosage">Dosage: </label>
       <input type="number" name="dosage" required />
       <label for="how-often">How often do you need to take it? </label>
-      <input type="text" name="how-often" required />
+      <select name="how-often" required>
+        <option value="" disabled selected>Select an option:</option>
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="twice-a-week">Twice a week</option>
+        <option value="two-weeks">Every 2 weeks</option>
+        <option value="monthly">Monthly</option>
+      </select>
       <label for="time-of-day"
         >What time(s) of day do you need to take it?
       </label>
       <input type="time" name="time-of-day" placeholder="optional" />
       <label for="re-order">How often do you need to re-order</label>
-      <input type="text" name="re-order" required />
+      <select name="re-order" required>
+        <option value="" disabled selected>Select an option:</option>
+        <option value="weekly">Weekly</option>
+        <option value="two-weeks">Every 2 weeks</option>
+        <option value="monthly">Monthly</option>
+        <option value="three-months">Every 3 months</option>
+      </select>
       <button type="submit">Add</button>
     </form>
 
