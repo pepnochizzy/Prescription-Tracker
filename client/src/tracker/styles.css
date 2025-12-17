@@ -8,6 +8,16 @@ body {
   background-color: lightblue;
 }
 
+.reminder-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #fffae6;
+  border: 2px solid #f5c542;
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  z-index: 9999;
 #medName p {
   cursor: pointer;
   padding-left: 1rem;
