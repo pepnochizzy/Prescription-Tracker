@@ -13,38 +13,40 @@
   </head>
   <body>
     <form id="newPrescriptionForm">
-      <legend>Add a new prescription</legend>
-      <label for="medicationName">Name of medication: </label>
-      <input
-        type="text"
-        name="medicationName"
-        placeholder="This can be whatever you like - this is what will appear on alerts"
-        required
-      />
-      <label for="dosage">Dosage: </label>
-      <input type="number" name="dosage" required />
-      <label for="howOften">How often do you need to take it? </label>
-      <select name="howOften" required>
-        <option value="" disabled selected>Select an option:</option>
-        <option value="daily">Daily</option>
-        <option value="weekly">Weekly</option>
-        <option value="twice-a-week">Twice a week</option>
-        <option value="two-weeks">Every 2 weeks</option>
-        <option value="monthly">Monthly</option>
-      </select>
-      <label for="timeOfDay"
-        >What time(s) of day do you need to take it?
-      </label>
-      <input type="time" name="timeOfDay" placeholder="optional" />
-      <label for="reOrder">How often do you need to re-order</label>
-      <select name="reOrder" required>
-        <option value="" disabled selected>Select an option:</option>
-        <option value="weekly">Weekly</option>
-        <option value="two-weeks">Every 2 weeks</option>
-        <option value="monthly">Monthly</option>
-        <option value="three-months">Every 3 months</option>
-      </select>
-      <button type="submit">Add</button>
+      <fieldset>
+        <legend>Add a new prescription</legend>
+        <label for="medicationName">Name of medication: </label>
+        <input
+          type="text"
+          name="medicationName"
+          placeholder="This can be whatever you like - this is what will appear on alerts"
+          required
+        />
+        <label for="dosage">Dosage: </label>
+        <input type="number" name="dosage" required />
+        <label for="howOften">How often do you need to take it? </label>
+        <select name="howOften" required>
+          <option value="" disabled selected>Select an option:</option>
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+          <option value="twice-a-week">Twice a week</option>
+          <option value="two-weeks">Every 2 weeks</option>
+          <option value="monthly">Monthly</option>
+        </select>
+        <label for="timeOfDay"
+          >What time(s) of day do you need to take it?
+        </label>
+        <input type="time" name="timeOfDay" placeholder="optional" />
+        <label for="reOrder">How often do you need to re-order</label>
+        <select name="reOrder" required>
+          <option value="" disabled selected>Select an option:</option>
+          <option value="weekly">Weekly</option>
+          <option value="two-weeks">Every 2 weeks</option>
+          <option value="monthly">Monthly</option>
+          <option value="three-months">Every 3 months</option>
+        </select>
+        <button type="submit">Add</button>
+      </fieldset>
     </form>
 
     <nav>
