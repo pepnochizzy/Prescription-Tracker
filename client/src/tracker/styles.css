@@ -4,8 +4,168 @@
   box-sizing: border-box;
 }
 
+:root {
+  --fs-xl: clamp(2rem, 2vw + 1rem, 8rem);
+  --fs-600: 2rem;
+  --fs-500: 1rem;
+  --fs-400: 0.8rem;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-xl: clamp(4rem, 5vw + 1rem, 6rem);
+    --fs-600: 2rem;
+    --fs-500: 1.4rem;
+    --fs-400: 1rem;
+  }
+}
+
 body {
   background-color: lightblue;
+  font-size: var(--fs-500);
+  font-family: "Inter", sans-serif;
+  padding-top: 2vh;
+}
+
+#welcome {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-600);
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+button {
+  min-width: fit-content;
+  width: 10vw;
+  border-radius: 12px;
+  height: 5vh;
+  font-size: var(--fs-400);
+}
+
+#leftToTake {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding-left: 5vw;
+}
+
+#leftToTake > div > p {
+  padding-left: 1.5vw;
+}
+
+#leftToTake > div > p:first-of-type {
+  font-weight: bold;
+}
+
+h2 {
+  grid-row: 1;
+  align-self: end;
+}
+
+.medicineName {
+  border-block-start: 1px solid gray;
+}
+
+.timeToTake {
+  border-block-start: 1px solid gray;
+}
+
+#notTakenmedName {
+  grid-column: 1;
+  grid-row: 2;
+  border: 1px solid gray;
+  border-radius: 12px;
+  /* padding-bottom: 2vh; */
+}
+
+#timeToTake {
+  grid-column: 2;
+  grid-row: 2;
+  border: 1px solid gray;
+  border-radius: 12px;
+}
+
+#takenAlready {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding-left: 5vw;
+  margin-top: 4vh;
+}
+
+#takenAlready > div > p {
+  padding-left: 1.5vw;
+}
+
+#takenMedName {
+  grid-column: 1;
+  grid-row: 2;
+  border: 1px solid gray;
+  border-radius: 12px;
+}
+
+#timeTaken {
+  grid-column: 2;
+  grid-row: 2;
+  border: 1px solid gray;
+  border-radius: 12px;
+}
+
+#overview {
+  border-block-start: 1px solid gray;
+  margin-top: 2rem;
+  width: 80%;
+  padding-left: 5vw;
+}
+
+nav {
+  background-color: gray;
+  min-height: fit-content;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navLabel {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: blueviolet;
+}
+
+@media (min-width: 800px) {
+  nav {
+    top: 0;
+    justify-content: end;
+    gap: 2vh;
+  }
+  body {
+    padding-top: 8vh;
+  }
+  .navLabel {
+    display: block;
+    font-size: var(--fs-400);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
+  i {
+    text-align: center;
+  }
 }
 
 .reminder-popup {
