@@ -20,11 +20,28 @@ function createPtag(text, i) {
 async function renderLeftToTake(medicineData) {
   const notTakenMedDiv = document.getElementById("notTakenmedName");
   const timeToTakeDiv = document.getElementById("timeTaken");
+  const nameTitle = createPtag("Medication", "title");
+  const takeTitle = createPtag("Time to take", "title");
+  notTakenMedDiv.append(nameTitle);
+  timeToTakeDiv.append(takeTitle);
   for (let i = 0; i < medicineData.length; i++) {
     const medicationP = createPtag(
       medicineData[i].medication_name,
       "medicineName"
     );
-    notTakenMedDiv.appendChild(medicationP);
+    notTakenMedDiv.append(medicationP);
+    timeToTakeDiv.append(); //times for medication
   }
 }
+
+// async function timeComparison(medicineData) {
+//   const notTakenMedDiv = document.getElementById("notTakenmedName");
+//   const timeToTakeDiv = document.getElementById("timeTaken");
+//   for (let i = 0; i < medicineData.length; i++) {
+//     const medicationP = createPtag(
+//       medicineData[i].medication_name,
+//       "medicineName"
+//     );
+//     notTakenMedDiv.appendChild(medicationP);
+//   }
+// }
