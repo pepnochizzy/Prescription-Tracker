@@ -33,15 +33,3 @@ async function renderLeftToTake(medicineData) {
     timeToTakeDiv.append(); //times for medication
   }
 }
-
-// async function timeComparison(medicineData) {
-//   const notTakenMedDiv = document.getElementById("notTakenmedName");
-//   const timeToTakeDiv = document.getElementById("timeTaken");
-//   for (let i = 0; i < medicineData.length; i++) {
-//     const medicationP = createPtag(
-//       medicineData[i].medication_name,
-//       "medicineName"
-//     );
-//     notTakenMedDiv.appendChild(medicationP);
-//   }
-// }
