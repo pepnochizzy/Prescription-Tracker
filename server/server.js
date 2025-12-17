@@ -24,13 +24,14 @@ app.post("/create-prescription", (req, res) => {
   console.log(newPrescription);
   //insert data into table
   const query = db.query(
-    `INSERT INTO prescriptions (medication_name, dosage, how_often, time_of_day, re_order) VALUES ($1, $2, $3, $4, $5)`,
+    `INSERT INTO prescriptions (medication_name, dosage, how_often, time_of_day, re_order, med_start) VALUES ($1, $2, $3, $4, $5, $6)`,
     [
       newPrescription.medicationName,
       newPrescription.dosage,
       newPrescription.howOften,
       newPrescription.timeOfDay,
       newPrescription.reOrder,
+      newPrescription.medStart,
     ]
   );
   res.json({ status: "success!", values: newPrescription });
