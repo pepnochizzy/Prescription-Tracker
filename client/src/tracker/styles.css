@@ -7,3 +7,21 @@
 body {
   background-color: lightblue;
 }
+
+#medName p {
+  cursor: pointer;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.med-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 3rem;
+  padding-bottom: 0.5rem;
+}
+
+.hide {
+  display: none;
+}
