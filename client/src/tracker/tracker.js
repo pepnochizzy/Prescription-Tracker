@@ -5,6 +5,7 @@ async function getMedicationData() {
   const medicineData = await response.json();
   console.log(medicineData);
   renderLeftToTake(medicineData);
+  startReminderChecker(medicineData);
 }
 getMedicationData();
 
@@ -28,3 +29,61 @@ async function renderLeftToTake(medicineData) {
     notTakenMedDiv.appendChild(medicationP);
   }
 }
+
+// set up variable that stores whether the reminder has already been sent that day or not - if it is not in the Set it runs, if it is then it's ignored
+const remindersShown = new Set();
+
+// set up isTimeToTake function - compares medication time to current time
+// this function takes one row (medication entry) and the current time, and returns true or false - decides whether popup should show or not
+function isTimeToTake(row, now) {
+  // this takes the time of day (14:30), splits into 2 objects "14" and "30" and map.Number turns the strings into numbers
+  const [hour, minute] = row.time_of_day.split(":").map(Number);
+  // check if current hour/minute equals the one in the row - both must be true to trigger the reminder
+  const sameHour = now.getHours() === hour;
+  const sameMinute = now.getMinutes() === minute;
+  // create a unique reminder key for each day (e.g. Aspirin-Mon Dec 16 2025)
+  const todayKey = `${row.medication_name}-${now.toDateString()}`;
+
+  // if it is the same hour and minute as the database and we have not already shown the reminder, then it is true and we show the popup
+  if (sameHour && sameMinute && !remindersShown.has(todayKey)) {
+    // mark the reminder as shown so it wont show again
+    remindersShown.add(todayKey);
+    return true;
+  } else return false;
+}
+
+// create fuction to check if reminder should be sent (runs every minute) - this runs every 60 seconds (60*1000 ms)? - use interval to do this
+// startReminderChecker runs a clock every minute, checks the current time against each medication’s schedule, and triggers a popup when the time matches
+function startReminderChecker(medicineData) {}
+// every 60 seconds, run this setInterval block of code
+setInterval(() => {
+  // create a const called now which represents what the current time is (fornat is Mon Dec 16 2025 14:30:12 GMT+0000) - from this we can extract current hour using now.getHours(), minute now.getMinutes() and day of week now.getDay()
+  const now = new Date();
+  // we want to create a loop to run through all medications on that users database, to check if that medication should be taken now
+  medicineData.forEach((row) => {
+    // given the current time, should the medication be taken now Y/N?
+    if (isTimeToTake(row, now)) {
+      sendReminder(row);
+    }
+  });
+  // check every minute
+}, 60 * 1000);
+
+// create a fuction that sends a reminder at the time inputted in form
+function sendReminder(row) {
+  const reminderPopUp = document.createElement("div");
+  reminderPopUp.className = "reminder-popup";
+  reminderPopUp.textContent = `Please take ${row.dosage} of ${row.medication_name} now`;
+  document.body.appendChild(reminderPopUp);
+  // close pop up after 10 seconds
+  setTimeout(() => {
+    reminderPopUp.remove();
+  }, 10000);
+
+  // for each medication, this div should appear at the time of day in medicineData.time_of_day
+  // for each medication, this div should appear if daily every X ms and if weekly every x ms
+}
+
+// create a function that compares the time to take to current time to place in correct section
+
+// export this to show across the whole website
