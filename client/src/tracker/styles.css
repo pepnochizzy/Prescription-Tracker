@@ -18,4 +18,20 @@ body {
   border-radius: 8px;
   font-weight: bold;
   z-index: 9999;
+#medName p {
+  cursor: pointer;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.med-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 3rem;
+  padding-bottom: 0.5rem;
+}
+
+.hide {
+  display: none;
 }

@@ -6,6 +6,7 @@ async function getMedicationData() {
   console.log(medicineData);
   renderLeftToTake(medicineData);
   startReminderChecker(medicineData);
+  renderOverview(medicineData);
 }
 getMedicationData();
 
@@ -21,12 +22,17 @@ function createPtag(text, i) {
 async function renderLeftToTake(medicineData) {
   const notTakenMedDiv = document.getElementById("notTakenmedName");
   const timeToTakeDiv = document.getElementById("timeTaken");
+  const nameTitle = createPtag("Medication", "title");
+  const takeTitle = createPtag("Time to take", "title");
+  notTakenMedDiv.append(nameTitle);
+  timeToTakeDiv.append(takeTitle);
   for (let i = 0; i < medicineData.length; i++) {
     const medicationP = createPtag(
       medicineData[i].medication_name,
       "medicineName"
     );
-    notTakenMedDiv.appendChild(medicationP);
+    notTakenMedDiv.append(medicationP);
+    timeToTakeDiv.append(); //times for medication
   }
 }
 
@@ -84,3 +90,42 @@ function startReminderChecker(medicineData) {
 }
 
 // export this to show across the whole website
+//Overview section
+
+async function renderOverview(medicineData) {
+  const medName = document.getElementById("medName");
+  for (let i = 0; i < medicineData.length; i++) {
+    const med = document.createElement("p");
+    med.textContent = `> ${medicineData[i].medication_name}`;
+    medName.appendChild(med);
+
+    const medInfo = document.createElement("ul");
+    medInfo.classList = "hide";
+    medName.appendChild(medInfo);
+
+    const dosage = document.createElement("li");
+    dosage.textContent = `Dosage: ${medicineData[i].dosage}`;
+    medInfo.appendChild(dosage);
+
+    const howOften = document.createElement("li");
+    howOften.textContent = `Take ${medicineData[i].how_often}`;
+    medInfo.appendChild(howOften);
+
+    const timeOfDay = document.createElement("li");
+    timeOfDay.textContent = `Take at ${medicineData[i].time_of_day}`;
+    medInfo.appendChild(timeOfDay);
+
+    const reOrder = document.createElement("li");
+    reOrder.textContent = `Re-order ${medicineData[i].re_order}`;
+    medInfo.appendChild(reOrder);
+
+    med.addEventListener("click", () => {
+      medInfoDisplay(medInfo);
+    });
+  }
+}
+
+function medInfoDisplay(medInfo) {
+  medInfo.classList.toggle(`hide`);
+  medInfo.classList.toggle(`med-info`);
+}
