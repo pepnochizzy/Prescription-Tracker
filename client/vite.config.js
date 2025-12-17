@@ -1,8 +1,9 @@
 import { dir } from "console";
 import { dirname, resolve } from "path";
+import { fileURLToPath } from "url";
 import { defineConfig } from "vite";
 
-const __dirname = dirname("client");
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   build: {
