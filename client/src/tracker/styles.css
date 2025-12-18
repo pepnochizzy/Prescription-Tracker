@@ -20,6 +20,10 @@
   }
 }
 
+/* the above font size variables can be used like this:
+font-size: var(--fs-xl);
+for my styling on the tracker page, I used xl for the title, 600 for headings and 400 for normal text. I left the 500 in but I have not used it in any styling for tracker page.  */
+
 /* colours used: 
 rgb(30, 85, 92); green
 rgb(185, 184, 185); white (text boxes on tracker page and text that sits on the green)
