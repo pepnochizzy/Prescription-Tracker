@@ -25,7 +25,7 @@ newPrescriptionForm.addEventListener("submit", handlePrescriptionSubmit);
 
 function medAddFunction() {
   const medAdded = document.createElement("p");
-  medAdded.textContent = "Prescription added";
+  medAdded.textContent = "Prescription Added!";
   medAdded.className = "med-added";
   newPrescriptionForm.appendChild(medAdded);
 
