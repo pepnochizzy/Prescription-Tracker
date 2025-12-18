@@ -75,4 +75,77 @@ nav {
   grid-column-start: 2;
   grid-row-start: 2;
   background-color: lightgrey;
+  background-color: peru;
+  font-family: "Inter", sans-serif;
 }
+
+:root {
+  --fs-xl: clamp(2rem, 2vw + 1rem, 3rem);
+  --fs-600: 2rem;
+  --fs-500: 1rem;
+  --fs-400: 0.8rem;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-xl: clamp(3rem, 3vw + 1rem, 4rem);
+    --fs-600: 2rem;
+    --fs-500: 1.4rem;
+    --fs-400: 1rem;
+  }
+}
+
+/* the above font size variables can be used like this:
+font-size: var(--fs-xl);
+for my styling on the tracker page, I used xl for the title, 600 for headings and 400 for normal text. I left the 500 in but I have not used it in any styling for tracker page.  */
+
+/* colours used: 
+rgb(30, 85, 92); green
+rgb(185, 184, 185); white (text boxes on tracker page and text that sits on the green)
+background-color: rgb(219, 217, 219); off-white*/
+
+/* nav bar styling */
+nav {
+  background-color: rgb(30, 85, 92);
+  min-height: fit-content;
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navLabel {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(229, 235, 234);
+}
+
+a:hover {
+  color: rgb(185, 184, 185);
+}
+
+@media (min-width: 800px) {
+  nav {
+    top: 0;
+    justify-content: end;
+    gap: 2vh;
+  }
+  .navLabel {
+    display: block;
+    font-size: var(--fs-400);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
+  i {
+    text-align: center;
+  }
+}
+/* nav bar styling */
