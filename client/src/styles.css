@@ -64,7 +64,7 @@ body {
 
 /* TODAY'S MEDICATION GRID =============*/
 #todayTable {
-  background-color: white;
+  background-color: rgb(219, 217, 219);
   margin: 2rem;
   padding: 2rem;
 }
@@ -170,7 +170,7 @@ h2 {
 #trackers {
   margin: 2rem;
   padding: 2rem;
-  background-color: white;
+  background-color: rgb(219, 217, 219);
 }
 
 .tracker-grid {
