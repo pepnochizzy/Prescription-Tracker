@@ -54,6 +54,8 @@ button {
   background-color: rgb(30, 85, 92);
   color: rgb(229, 235, 234);
   border: 1px solid gray;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 button:hover {
