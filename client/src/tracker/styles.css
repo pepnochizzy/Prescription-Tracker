@@ -236,13 +236,13 @@ a:hover {
   position: fixed;
   top: 20px;
   right: 20px;
-  background: rgb(30, 85, 92);
-  border: 2px solid gray;
+  background: rgb(245, 218, 66);
+  border: 2px solid rgb(10, 9, 9);
   padding: 16px;
   border-radius: 8px;
   font-weight: bold;
   z-index: 9999;
-  color: rgb(229, 235, 234);
+  color: rgb(10, 9, 9);
 }
 
 #medName {
