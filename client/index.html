@@ -9,6 +9,7 @@
       crossorigin="anonymous"
     ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title prescription-tracker></title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +21,16 @@
   <body>
     <header>
       <img src="logo" alt="logo of app" />
+      <h1>"Hello <span id="username"></span>"</h1>
     </header>
+
+    <section id="upComingReminder">upcoming-reminder</section>
+    <section id="your-tracker">
+      YourTracker
+      <button type="button" id="prescription" href="/src/tracker/">
+        <a id="track" href="/src/tracker/">prescription</a>
+      </button>
+    </section>
     <h1>"Hello <span id="username"></span>"</h1>
 
     <!-- Medication for today table -->

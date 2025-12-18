@@ -81,17 +81,20 @@ function createElement() {
 
   const yourTracker = document.getElementById("your-tracker");
 
-  const prescriptionButton = document.createElement("button");
+  const prescriptionButton = document.getElementById("button");
   prescriptionButton.textContent = "Prescription";
   yourTracker.appendChild(prescriptionButton);
+  prescriptionButton.id = "prescription-button";
 
   const plantWateringButton = document.createElement("button");
   plantWateringButton.textContent = "Plant Watering Button";
   yourTracker.appendChild(plantWateringButton);
+  plantWateringButton.id = "plant-watering-button";
 
   const createANewTracker = document.createElement("button");
   createANewTracker.textContent = "Create a New Tracker";
   yourTracker.appendChild(createANewTracker);
+  createANewTracker.id = "create-a-new-tracker";
 }
 
 createElement();
