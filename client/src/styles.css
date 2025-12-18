@@ -27,8 +27,15 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: #f54ccf;
+  background: #ce51af;
   color: white;
+  padding-top: 1rem;
+}
+
+@media (min-width: 800px) {
+  .app-header {
+    padding-top: 5rem;
+  }
 }
 
 .logo {
