@@ -27,7 +27,7 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: #ce51af;
+  background: rgb(72, 170, 125);
   color: white;
   padding-top: 1rem;
 }
@@ -196,6 +196,7 @@ h2 {
   border-radius: 12px;
   font-size: 1rem;
   font-family: "Inter", sans-serif;
+  font-weight: bold;
 }
 
 .tracker-card.create {
