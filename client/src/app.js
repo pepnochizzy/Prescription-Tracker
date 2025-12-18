@@ -18,8 +18,6 @@ async function getMedicationData() {
   const medicineData = await response.json();
   console.log(medicineData);
   renderTodayMedication(medicineData);
-  startReminderChecker(medicineData);
-  renderOverview(medicineData);
 }
 getMedicationData();
 
@@ -79,7 +77,7 @@ export async function renderTodayMedication(medicineData) {
 }
 
 function createElement() {
-  // const upComingReminder = document.getElementById("upcoming-reminder");
+  const upComingReminder = document.getElementById("upcoming-reminder");
 
   const yourTracker = document.getElementById("your-tracker");
 
