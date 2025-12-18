@@ -15,19 +15,18 @@ async function handlePrescriptionSubmit(event) {
     },
     body: JSON.stringify({ formValues }),
   });
+  medAddedFunction();
 }
 
 newPrescriptionForm.addEventListener("submit", handlePrescriptionSubmit);
 
-const submitBtn = getElementById("submit-button");
-
-submitBtn.addEventListener("click", () => {
+function medAddedFunction() {
   const medAdded = document.createElement("p");
-  medAdded.textContent = "Prescription added";
+  medAdded.textContent = "Prescription added!";
   medAdded.className = "med-added";
   newPrescriptionForm.appendChild(medAdded);
 
   setTimeout(() => {
     medAdded.remove();
   }, 3000);
-});
+}
