@@ -5,22 +5,27 @@
 }
 
 body {
-  background-color: seagreen;
+  background-color: rgb(219, 217, 219);
   color: black;
   font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
 }
 
 #form-section {
   display: flex;
   justify-content: center;
-  padding-top: 2rem;
+  padding-top: 4.5rem;
   padding-bottom: 2rem;
 }
 
 #newPrescriptionForm {
-  background-color: aliceblue;
+  background-color: rgb(229, 235, 234);
   width: 90%;
-  font-family: "Inter", sans-serif;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border: solid 1px black;
+  border-radius: 12px;
 }
 
 :root {
@@ -52,11 +57,13 @@ fieldset {
   gap: 1rem;
   display: flex;
   flex-direction: column;
+  border: 0;
 }
 
 legend {
   font-weight: bold;
   font-size: 2rem;
+  color: rgb(30, 85, 92);
 }
 
 input {
@@ -72,19 +79,24 @@ button {
   height: 1.5rem;
   align-self: center;
   margin-bottom: 1rem;
-  background-color: seagreen;
-  color: white;
+  background-color: rgb(30, 85, 92);
+  color: rgb(229, 235, 234);
   cursor: pointer;
+  border-radius: 12px;
 }
 
 button:hover {
-  background-color: white;
-  color: seagreen;
+  background-color: rgb(229, 235, 234);
+  color: rgb(30, 85, 92);
 }
 
 @media (min-width: 600px) {
   body {
     font-size: 1rem;
+  }
+
+  #form-section {
+    padding-top: 3rem;
   }
 
   #newPrescriptionForm {
