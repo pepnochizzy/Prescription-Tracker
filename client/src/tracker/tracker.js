@@ -4,7 +4,7 @@ async function getMedicationData() {
   const response = await fetch("http://localhost:8080/get-info");
   const medicineData = await response.json();
   console.log(medicineData);
-  renderLeftToTake(medicineData);
+  renderTodayMedication(medicineData);
   startReminderChecker(medicineData);
   renderOverview(medicineData);
 }
@@ -18,27 +18,65 @@ function createPtag(text, i) {
   return p;
 }
 
+// create a function to check if med time is in the past
+function isMedTimeInPast(timeOfDay) {
+  const now = new Date();
+  const [hour, minute] = timeOfDay.split(":").map(Number);
+  const medTime = new Date();
+  medTime.setHours(hour, minute, 0, 0);
+  // return true if time has passed or false if medication time is still to come
+  return medTime <= now;
+}
+
 //dom manipulation to add medication names into section 1 and 2
-async function renderLeftToTake(medicineData) {
-  //get divs from html
+async function renderTodayMedication(medicineData) {
+  //LEFT TO TAKE
   const notTakenMedDiv = document.getElementById("notTakenmedName");
   const timeToTakeDiv = document.getElementById("timeToTake");
+
+  // TAKEN ALREADY
+  const takenMedDiv = document.getElementById("takenMedName");
+  const timeTakenDiv = document.getElementById("timeTaken");
+
   //create titles for top of table and append
-  const nameTitle = createPtag("Medication", "title");
-  const takeTitle = createPtag("Time to take", "title");
-  notTakenMedDiv.append(nameTitle);
-  timeToTakeDiv.append(takeTitle);
-  //loop to create p tags for name and time for each medication
-  for (let i = 0; i < medicineData.length; i++) {
-    const medicationP = createPtag(
-      medicineData[i].medication_name,
-      "medicineName"
-    );
-    const timeP = createPtag(medicineData[i].time_of_day, "timeToTake");
-    notTakenMedDiv.append(medicationP);
-    timeToTakeDiv.append(timeP); //times for medication
-  }
+  const notTakenNameTitle = createPtag("Medication", "title");
+  const timeToTakeTitle = createPtag("Time to take", "title");
+  notTakenMedDiv.append(notTakenNameTitle);
+  timeToTakeDiv.append(timeToTakeTitle);
+
+  const takenNameTitle = createPtag("Medication", "title");
+  const timeTakenTitle = createPtag("Taken at", "title");
+  takenMedDiv.append(takenNameTitle);
+  timeTakenDiv.append(timeTakenTitle);
+
+  medicineData.forEach((row) => {
+    const nameP = createPtag(row.medication_name, "medicineName");
+    const timeP = createPtag(row.time_of_day, "time");
+
+    if (isMedTimeInPast(row.time_of_day)) {
+      // time passes -> taken already
+      takenMedDiv.append(nameP);
+      timeTakenDiv.append(timeP);
+    } else {
+      // time not passed -> left to take
+      notTakenMedDiv.append(nameP);
+      timeToTakeDiv.append(timeP);
+    }
+  });
 }
+
+// LARA'S CODE:
+//   //loop to create p tags for name and time for each medication
+//   for (let i = 0; i < medicineData.length; i++) {
+//     const medicationP = createPtag(
+//       medicineData[i].medication_name,
+//       "medicineName"
+//     );
+//     const timeP = createPtag(medicineData[i].time_of_day, "timeToTake");
+//     notTakenMedDiv.append(medicationP);
+//     timeToTakeDiv.append(timeP); //times for medication
+//   }
+// }
 
 // set up variable that stores whether the reminder has already been sent that day or not - if it is not in the Set it runs, if it is then it's ignored
 const remindersShown = new Set();
