@@ -5,8 +5,21 @@
 }
 
 body {
-  background-color: pink;
+  background-color: seagreen;
   color: black;
+  font-size: 1.5rem;
+}
+
+#form-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#newPrescriptionForm {
+  background-color: aliceblue;
+  width: 90%;
   font-family: "Inter", sans-serif;
 }
 
@@ -16,13 +29,55 @@ rgb(185, 184, 185); white (text boxes on tracker page and text that sits on the 
 background-color: rgb(219, 217, 219); off-white*/
 
 fieldset {
+  gap: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
 legend {
   font-weight: bold;
+  font-size: 2rem;
+}
+
+input {
+  height: 1.5rem;
+}
+
+select {
+  height: 1.5rem;
+}
+
+button {
+  width: 4rem;
+  height: 1.5rem;
+  align-self: center;
+  margin-bottom: 1rem;
+  background-color: seagreen;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color: seagreen;
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+
+  #newPrescriptionForm {
+    width: 80%;
+  }
+
+  input {
+    height: 1.1rem;
+  }
+
+  select {
+    height: 1.1rem;
+  }
 }
 
 /* nav bar styling */
