@@ -20,6 +20,7 @@ async function getMedicationData() {
   const medicineData = await response.json();
   console.log(medicineData);
   renderTodayMedication(medicineData);
+  startReminderChecker(medicineData);
 }
 getMedicationData();
 
