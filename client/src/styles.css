@@ -9,6 +9,11 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+/* colours used: 
+rgb(30, 85, 92); green
+rgb(185, 184, 185); white (text boxes on tracker page and text that sits on the green)
+background-color: rgb(219, 217, 219); off-white*/
+
 /* nav bar styling */
 nav {
   background-color: rgb(30, 85, 92);
