@@ -9,15 +9,21 @@
       crossorigin="anonymous"
     ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prescription Tracker</title>
+    <title prescription-tracker></title>
   </head>
   <body>
     <header>
       <img src="logo" alt="logo of app" />
+      <h1>"Hello <span id="username"></span>"</h1>
     </header>
-    <h1>"Hello <span id="username"></span>"</h1>
+
     <section id="upComingReminder">upcoming-reminder</section>
-    <section id="yourtracker">Your Tracker</section>
+    <section id="your-tracker">
+      YourTracker
+      <button type="button" id="prescription" href="/src/tracker/">
+        <a id="track" href="/src/tracker/">prescription</a>
+      </button>
+    </section>
     <nav>
       <a id="home" href="#home" aria-label="home"
         ><i class="fa-solid fa-house"></i>Home</a
