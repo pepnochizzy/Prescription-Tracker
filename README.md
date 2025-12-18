@@ -14,11 +14,17 @@ Problem domain:
 
 User stories:
 🐿️ As a user, I’d like to fill out a working form so that I can submit my prescription information effectively and without issues.
+
 🐿️ As a user, I want the application to work as expected on my mobile device so that I can access and use it conveniently on the go.
+
 🐿️ As a user, I want to easily view all the medications I need to take each day, based on what I have inputted into the form.
+
 🐿️ As a user, I want to be reminded to take each medication at the correct time and date.
+
 🐿️ As a developer, I want to create a working API GET route so that I can retrieve data from the server and display it to the users.
+
 🐿️ As a developer, I want to create a working API POST route so that users can send data to the server and store it.
+
 🐿️ As a developer, I want to create and seed a database with dummy data so that I have realistic test data for development purposes.
 
 Wireframe:
