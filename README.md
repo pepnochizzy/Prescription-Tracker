@@ -19,7 +19,7 @@ Wireframe:
 [\*\* link to figma](https://www.figma.com/board/Oj7UEmVYeAtIQj39gA5cw4/Week-5-Project?node-id=0-1&p=f&t=j9Cl4xy5obvW9O8l-0)
 
 A list of any libraries, frameworks, or packages that your application requires in order to properly function:
-Express.js, pg, cors...
+Express.js, pg, cors, vite, dotenv, supabase
 
 Instructions on how to run your app:
 
