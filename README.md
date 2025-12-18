@@ -4,15 +4,17 @@ Project name: Prescription-Tracker
 Render link:
 Repo link:
 
-Team members: Lara, Dylan, Nnamdi, Sinéad
+### Team members: Lara, Dylan, Nnamdi, Sinéad
 
-Project description:
+### Project description:
 An app to track prescriptions and set reminders for when to take/when to reorder
 
-Problem domain:
-\*\*People can't always remember what food items they have in their houses, and coming up with recipe ideas isn't always easy.
+### Problem domain:
+People often have different prescription information kept in various locations/on paper. 
+They have to remember when to take their prescriptions and when to re-order, which can be difficult when someone is unwell or there are multiple to manage.
 
-User stories:
+### User stories:
+
 🐿️ As a user, I’d like to fill out a working form so that I can submit my prescription information effectively and without issues.
 
 🐿️ As a user, I want the application to work as expected on my mobile device so that I can access and use it conveniently on the go.
@@ -27,16 +29,15 @@ User stories:
 
 🐿️ As a developer, I want to create and seed a database with dummy data so that I have realistic test data for development purposes.
 
-Wireframe:
+### Wireframe:
 [Figma](url) 
 
 A list of any libraries, frameworks, or packages that your application requires in order to properly function:
 Express.js, pg, cors, vite, dotenv, supabase
 
-## Dylan
-Instructions on how to run your app:
+### (Dylan) Instructions on how to run your app:
 
-Lighthouse report: [\*\* link to figma](https://www.figma.com/board/Oj7UEmVYeAtIQj39gA5cw4/Week-5-Project?node-id=0-1&p=f&t=j9Cl4xy5obvW9O8l-0)
+### Lighthouse report: [\*\* link to figma](https://www.figma.com/board/Oj7UEmVYeAtIQj39gA5cw4/Week-5-Project?node-id=0-1&p=f&t=j9Cl4xy5obvW9O8l-0)
 
 Reflections:
 
