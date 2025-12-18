@@ -79,3 +79,108 @@ a:hover {
   }
 }
 /* nav bar styling */
+
+/*  tracker styling  */
+#leftToTake {
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  padding-left: 5vw;
+  overflow: hidden;
+  padding-top: 2%;
+}
+
+#leftToTake > div > p {
+  padding-left: 1.5vw;
+  background-color: rgb(229, 235, 234);
+  overflow: hidden;
+  padding-bottom: 0.5rem;
+}
+
+#leftToTake > div > p:first-of-type {
+  font-weight: bold;
+  color: rgb(30, 85, 92);
+  font-size: var(--fs-600);
+  text-wrap: nowrap;
+  padding-left: 1.2vw;
+}
+
+h2 {
+  grid-row: 1;
+  align-self: end;
+  padding-bottom: 2%;
+}
+
+.medicineName {
+  border-block-start: 1px solid gray;
+}
+
+.time {
+  border-block-start: 1px solid gray;
+}
+
+#notTakenmedName {
+  grid-column: 1;
+  grid-row: 2;
+  border: 1px solid gray;
+  border-radius: 12px;
+  overflow: hidden;
+  /* padding-bottom: 2vh; */
+}
+
+#timeToTake {
+  grid-column: 2;
+  grid-row: 2;
+  border: 1px solid gray;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#takenAlready {
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  padding-left: 5vw;
+  margin-top: 4vh;
+}
+
+#takenAlready > div > p {
+  padding-left: 1.5vw;
+  background-color: rgb(229, 235, 234);
+  overflow: hidden;
+  padding-bottom: 0.5rem;
+}
+
+#takenAlready > div > p:first-of-type {
+  font-weight: bold;
+  color: rgb(30, 85, 92);
+  font-size: var(--fs-600);
+  text-wrap: nowrap;
+  padding-left: 1.2vw;
+}
+
+#takenMedName {
+  grid-column: 1;
+  grid-row: 2;
+  border: 1px solid gray;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#timeTaken {
+  grid-column: 2;
+  grid-row: 2;
+  border: 1px solid gray;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#overview {
+  /* border-block-start: 1px solid gray; */
+  margin-top: 2%;
+  width: 80%;
+  padding-left: 5vw;
+  padding-bottom: 4%;
+}

@@ -103,7 +103,7 @@ h2 {
   border-block-start: 1px solid gray;
 }
 
-.timeToTake {
+.time {
   border-block-start: 1px solid gray;
 }
 
@@ -153,6 +153,7 @@ h2 {
   grid-row: 2;
   border: 1px solid gray;
   border-radius: 12px;
+  overflow: hidden;
 }
 
 #timeTaken {
@@ -160,13 +161,15 @@ h2 {
   grid-row: 2;
   border: 1px solid gray;
   border-radius: 12px;
+  overflow: hidden;
 }
 
 #overview {
   /* border-block-start: 1px solid gray; */
-  margin-top: 2rem;
+  margin-top: 2%;
   width: 80%;
   padding-left: 5vw;
+  padding-bottom: 4%;
 }
 
 nav {
