@@ -4,7 +4,14 @@
   box-sizing: border-box;
 }
 
-header {
+body {
+  background-color: rgb(219, 217, 219);
+  font-size: var(--fs-500);
+  font-family: "Inter", sans-serif;
+  /* padding-top: 2vh; */
+}
+
+/* header {
   image-orientation: inherit;
   background-color: green;
   position: absolute;
@@ -12,145 +19,56 @@ header {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-}
+} */
 
-h1 {
-  padding: 14px;
-  font: 2em sans-serif;
-  position: absolute;
-}
-
-body {
-  background-color: rgb(34, 139, 113);
-  color: whitesmoke;
+/* HEADER */
+.app-header {
   display: flex;
-  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #ce51af;
+  color: white;
+  padding-top: 1rem;
 }
 
-.box {
-  height: 15px;
+@media (min-width: 800px) {
+  .app-header {
+    padding-top: 5rem;
+  }
+}
+
+.logo {
   width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
-#upcoming-reminder {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  text-align: center;
-  flex-direction: column;
+.app-title {
+  font-size: 1.5rem;
 }
 
-#your-tracker {
-  justify-content: space-evenly;
-  align-items: center;
-  grid-column-start: 1;
-  grid-row-start: 3;
-  -ms-grid-column-span: 1;
-  -ms-grid-row-span: 2;
+/* MAIN */
+.home {
+  padding: 1rem;
+  padding-bottom: 6rem;
 }
 
-#prescription {
+/* GREETING */
+.greeting h2 {
+  margin: 1rem 0;
+  font-size: 3rem;
+  margin-left: 2rem;
+  margin-top: 3rem;
 }
 
-#plant-watering-button {
-  grid-column-start: 2;
-  grid-row-start: 3;
+/* TODAY'S MEDICATION GRID =============*/
+#todayTable {
+  background-color: white;
+  margin: 2rem;
+  padding: 2rem;
 }
 
-#create-a-new-tracker {
-  grid-column-start: 3;
-  grid-row-start: 3;
-}
-
-button {
-  text-align: center;
-  color: black;
-}
-
-font {
-  font-size: 3rems;
-  color: whitesmoke;
-}
-
-nav {
-  grid-column-start: 2;
-  grid-row-start: 2;
-  background-color: lightgrey;
-  background-color: peru;
-  font-family: "Inter", sans-serif;
-}
-
-:root {
-  --fs-xl: clamp(2rem, 2vw + 1rem, 3rem);
-  --fs-600: 2rem;
-  --fs-500: 1rem;
-  --fs-400: 0.8rem;
-}
-
-@media (min-width: 800px) {
-  :root {
-    --fs-xl: clamp(3rem, 3vw + 1rem, 4rem);
-    --fs-600: 2rem;
-    --fs-500: 1.4rem;
-    --fs-400: 1rem;
-  }
-}
-
-/* the above font size variables can be used like this:
-font-size: var(--fs-xl);
-for my styling on the tracker page, I used xl for the title, 600 for headings and 400 for normal text. I left the 500 in but I have not used it in any styling for tracker page.  */
-
-/* colours used: 
-rgb(30, 85, 92); green
-rgb(185, 184, 185); white (text boxes on tracker page and text that sits on the green)
-background-color: rgb(219, 217, 219); off-white*/
-
-/* nav bar styling */
-nav {
-  background-color: rgb(30, 85, 92);
-  min-height: fit-content;
-  height: 6vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.navLabel {
-  display: none;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(229, 235, 234);
-}
-
-a:hover {
-  color: rgb(185, 184, 185);
-}
-
-@media (min-width: 800px) {
-  nav {
-    top: 0;
-    justify-content: end;
-    gap: 2vh;
-  }
-  .navLabel {
-    display: block;
-    font-size: var(--fs-400);
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-  }
-  i {
-    text-align: center;
-  }
-}
-/* nav bar styling */
-
-/*  tracker styling  */
 #leftToTake {
   width: 90%;
   display: grid;
@@ -246,3 +164,185 @@ h2 {
   border-radius: 12px;
   overflow: hidden;
 }
+
+/* TRACKER CARDS */
+
+#trackers {
+  margin: 2rem;
+  padding: 2rem;
+  background-color: white;
+}
+
+.tracker-grid {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+
+  /* grid-template-columns: repeat(autofit, minmax(140px, 1fr)); */
+  gap: 1rem;
+}
+
+.tracker-card {
+  padding: 1rem;
+  text-align: center;
+  width: 10rem;
+  height: 10rem;
+  /* align-self: center; */
+  /* margin-bottom: 0.5rem; */
+  background-color: rgb(30, 85, 92);
+  color: rgb(229, 235, 234);
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.tracker-card.create {
+  background-color: rgb(72, 170, 125);
+}
+
+tracker-card:hover {
+  color: rgb(185, 184, 185);
+  cursor: pointer;
+  box-shadow: 2px 2px rgb(185, 184, 185);
+}
+
+/* #upcoming-reminder {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  text-align: center;
+  flex-direction: column;
+} */
+
+/* #your-tracker {
+  justify-content: space-evenly;
+  align-items: center;
+  grid-column-start: 1;
+  grid-row-start: 3;
+  -ms-grid-column-span: 1;
+  -ms-grid-row-span: 2;
+}
+
+#plant-watering-button {
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+#create-a-new-tracker {
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+
+button {
+  width: 4rem;
+  height: 1.5rem;
+  align-self: center;
+  margin-bottom: 0.5rem;
+  background-color: rgb(30, 85, 92);
+  color: rgb(229, 235, 234);
+  cursor: pointer;
+  border-radius: 12px;
+} */
+
+/* button {
+  text-align: center;
+  color: black;
+}
+
+font {
+  font-size: 3rems;
+  color: whitesmoke;
+} */
+
+/* nav {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  background-color: lightgrey;
+  background-color: peru;
+  font-family: "Inter", sans-serif;
+} */
+
+:root {
+  --fs-xl: clamp(2rem, 2vw + 1rem, 3rem);
+  --fs-600: 2rem;
+  --fs-500: 1rem;
+  --fs-400: 0.8rem;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-xl: clamp(3rem, 3vw + 1rem, 4rem);
+    --fs-600: 2rem;
+    --fs-500: 1.4rem;
+    --fs-400: 1rem;
+  }
+}
+
+/* the above font size variables can be used like this:
+font-size: var(--fs-xl);
+for my styling on the tracker page, I used xl for the title, 600 for headings and 400 for normal text. I left the 500 in but I have not used it in any styling for tracker page.  */
+
+/* colours used: 
+rgb(30, 85, 92); green
+rgb(185, 184, 185); white (text boxes on tracker page and text that sits on the green)
+background-color: rgb(219, 217, 219); off-white*/
+
+/* nav bar styling */
+nav {
+  background-color: rgb(30, 85, 92);
+  min-height: fit-content;
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navLabel {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(229, 235, 234);
+}
+
+a:hover {
+  color: rgb(185, 184, 185);
+}
+
+@media (min-width: 800px) {
+  nav {
+    top: 0;
+    justify-content: end;
+    gap: 2vh;
+  }
+  .navLabel {
+    display: block;
+    font-size: var(--fs-400);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
+  i {
+    text-align: center;
+  }
+}
+/* nav bar styling */
+
+/*  tracker styling  */
+
+/* h1 {
+  padding: 14px;
+  font: 2em sans-serif;
+  position: absolute;
+} */
+
+/* .box {
+  height: 15px;
+  width: 40px;
+} */
