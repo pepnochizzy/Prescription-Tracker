@@ -29,7 +29,7 @@ function isMedTimeInPast(timeOfDay) {
 }
 
 //dom manipulation to add medication names into section 1 and 2
-async function renderTodayMedication(medicineData) {
+export async function renderTodayMedication(medicineData) {
   //LEFT TO TAKE
   const notTakenMedDiv = document.getElementById("notTakenmedName");
   const timeToTakeDiv = document.getElementById("timeToTake");
