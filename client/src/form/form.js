@@ -26,7 +26,7 @@ function medAddedFunction() {
   medAdded.className = "med-added";
   newPrescriptionForm.appendChild(medAdded);
 
-  /*setTimeout(() => {
+  setTimeout(() => {
     medAdded.remove();
-  }, 3000);*/
+  }, 3000);
 }
