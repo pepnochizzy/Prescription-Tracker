@@ -6,4 +6,56 @@
 
 body {
   background-color: peru;
+  font-family: "Inter", sans-serif;
 }
+
+/* colours used: 
+rgb(30, 85, 92); green
+rgb(185, 184, 185); white (text boxes on tracker page and text that sits on the green)
+background-color: rgb(219, 217, 219); off-white*/
+
+/* nav bar styling */
+nav {
+  background-color: rgb(30, 85, 92);
+  min-height: fit-content;
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navLabel {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(229, 235, 234);
+}
+
+a:hover {
+  color: rgb(185, 184, 185);
+}
+
+@media (min-width: 800px) {
+  nav {
+    top: 0;
+    justify-content: end;
+    gap: 2vh;
+  }
+  .navLabel {
+    display: block;
+    font-size: var(--fs-400);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
+  i {
+    text-align: center;
+  }
+}
+/* nav bar styling */
