@@ -95,3 +95,40 @@ function createElement() {
 }
 
 createElement();
+
+// reminder copied to homepage
+
+const remindersShown = new Set();
+
+function isTimeToTake(row, now) {
+  const [hour, minute] = row.time_of_day.split(":").slice(0, 2).map(Number);
+  const sameHour = now.getHours() === hour;
+  const sameMinute = now.getMinutes() === minute;
+  const todayKey = `${row.medication_name}-${now.toDateString()}`;
+  if (sameHour && sameMinute && !remindersShown.has(todayKey)) {
+    remindersShown.add(todayKey);
+    return true;
+  }
+  return false;
+}
+
+function sendReminder(row) {
+  const reminderPopUp = document.createElement("div");
+  reminderPopUp.className = "reminder-popup";
+  reminderPopUp.textContent = `Please take ${row.dosage} of ${row.medication_name} now`;
+  document.body.appendChild(reminderPopUp);
+  setTimeout(() => {
+    reminderPopUp.remove();
+  }, 10000);
+}
+
+function startReminderChecker(medicineData) {
+  setInterval(() => {
+    const now = new Date();
+    medicineData.forEach((row) => {
+      if (isTimeToTake(row, now)) {
+        sendReminder(row);
+      }
+    });
+  }, 60 * 1000);
+}
