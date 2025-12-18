@@ -16,48 +16,59 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Prescription Tracker</title>
+    <title>Your Prescription Tracker</title>
   </head>
+
   <body>
-    <header>
-      <img src="logo" alt="logo of app" />
-      <h1>"Hello <span id="username"></span>"</h1>
+    <header class="app-header">
+      <img src="logo" alt="logo of app" class="logo" />
+      <h1 class="app-title">Your Prescription Tracker</h1>
     </header>
 
-    <section id="upComingReminder">upcoming-reminder</section>
-    <section id="your-tracker">
-      YourTracker
-      <button type="button" id="prescription" href="/src/tracker/">
-        <a id="track" href="/src/tracker/">prescription</a>
-      </button>
-    </section>
-    <h1>"Hello <span id="username"></span>"</h1>
-
-    <!-- Medication for today table -->
-    <section id="upComingReminder">Today's Medications</section>
-    <section id="todayTable">
-      <section id="leftToTake">
-        <h2>Left to take</h2>
-        <div id="notTakenmedName">
-          <!-- for dom manipulation elements, names of medications will be appended to here -->
-        </div>
-        <div id="timeToTake">
-          <!-- for dom manipulation elements, time to take medicine will be appended in to here -->
-        </div>
+    <main class="homepage">
+      <section class="greeting">
+        <h2>Hello <span id="username">Manny!</span></h2>
       </section>
 
-      <section id="takenAlready">
-        <h2>Taken Already</h2>
-        <div id="takenMedName">
-          <!-- for dom manipulation elements, names of medications will be appended to here -->
-        </div>
-        <div id="timeTaken">
-          <!-- for dom manipulation elements, time medicine was taken will be appended in to here -->
+      <section id="todayTable">
+        <h3>Today's Medications</h3>
+        <section id="leftToTake">
+          <h2>Left to take</h2>
+          <div id="notTakenmedName">
+            <!-- for dom manipulation elements, names of medications will be appended to here -->
+          </div>
+          <div id="timeToTake">
+            <!-- for dom manipulation elements, time to take medicine will be appended in to here -->
+          </div>
+        </section>
+
+        <section id="takenAlready">
+          <h2>Taken Already</h2>
+          <div id="takenMedName">
+            <!-- for dom manipulation elements, names of medications will be appended to here -->
+          </div>
+          <div id="timeTaken">
+            <!-- for dom manipulation elements, time medicine was taken will be appended in to here -->
+          </div>
+        </section>
+      </section>
+
+      <section id="trackers">
+        <h3>Your trackers</h3>
+        <div class="tracker-grid">
+          <button type="button" class="tracker-card">
+            <a id="prescription-link" href="/src/tracker/">Prescriptions</a>
+          </button>
+          <button type="button" class="tracker-card">
+            <a id="plant-link" href="#">Plant Watering</a>
+          </button>
+          <button type="button" class="tracker-card create">
+            <a id="create-link" href="/src/form">Create New Tracker +</a>
+          </button>
         </div>
       </section>
-    </section>
+    </main>
 
-    <section id="yourtracker">Your Tracker</section>
     <nav>
       <a id="home" href="#home" aria-label="home"
         ><i class="fa-solid fa-house"></i>Home</a
