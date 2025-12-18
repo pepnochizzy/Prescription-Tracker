@@ -27,7 +27,7 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: #ce51af;
+  background: rgb(72, 170, 125);
   color: white;
   padding-top: 1rem;
 }
@@ -64,7 +64,7 @@ body {
 
 /* TODAY'S MEDICATION GRID =============*/
 #todayTable {
-  background-color: white;
+  background-color: rgb(219, 217, 219);
   margin: 2rem;
   padding: 2rem;
 }
@@ -170,7 +170,7 @@ h2 {
 #trackers {
   margin: 2rem;
   padding: 2rem;
-  background-color: white;
+  background-color: rgb(219, 217, 219);
 }
 
 .tracker-grid {
@@ -196,6 +196,7 @@ h2 {
   border-radius: 12px;
   font-size: 1rem;
   font-family: "Inter", sans-serif;
+  font-weight: bold;
 }
 
 .tracker-card.create {
