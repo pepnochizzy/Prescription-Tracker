@@ -8,21 +8,24 @@ async function handlePrescriptionSubmit(event) {
   const formValues = Object.fromEntries(formDataTemplate);
   console.log(formValues);
 
-  await fetch("http://localhost:8080/create-prescription", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ formValues }),
-  });
-  medAddedFunction();
+  await fetch(
+    "https://prescription-tracker-server.onrender.com/create-prescription",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ formValues }),
+    }
+  );
+  medAddFunction();
 }
 
 newPrescriptionForm.addEventListener("submit", handlePrescriptionSubmit);
 
-function medAddedFunction() {
+function medAddFunction() {
   const medAdded = document.createElement("p");
-  medAdded.textContent = "Prescription added!";
+  medAdded.textContent = "Prescription added";
   medAdded.className = "med-added";
   newPrescriptionForm.appendChild(medAdded);
 

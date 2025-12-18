@@ -14,7 +14,9 @@ console.log(userName);
 // I need it to create elements for each of its properties
 
 async function getMedicationData() {
-  const response = await fetch("http://localhost:8080/get-info");
+  const response = await fetch(
+    "https://prescription-tracker-server.onrender.com/get-info"
+  );
   const medicineData = await response.json();
   console.log(medicineData);
   renderTodayMedication(medicineData);
