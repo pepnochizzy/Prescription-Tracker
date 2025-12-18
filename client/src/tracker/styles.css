@@ -49,6 +49,7 @@ button {
   width: 8vw;
   border-radius: 12px;
   height: 5vh;
+  min-height: fit-content;
   font-size: var(--fs-400);
   font-weight: bold;
   display: flex;
