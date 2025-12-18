@@ -12,6 +12,7 @@ An app to track prescriptions and set reminders for when to take/when to reorder
 Problem domain:
 \*\*People can't always remember what food items they have in their houses, and coming up with recipe ideas isn't always easy.
 
+#Sinead
 User stories:
 \*\*As a user, I want to see a list of the items I have in my pantry.
 
@@ -21,14 +22,17 @@ Wireframe:
 A list of any libraries, frameworks, or packages that your application requires in order to properly function:
 Express.js, pg, cors, vite, dotenv, supabase
 
+#Dylan
 Instructions on how to run your app:
 
-Lighthouse report:
+Lighthouse report: [\*\* link to figma](https://www.figma.com/board/Oj7UEmVYeAtIQj39gA5cw4/Week-5-Project?node-id=0-1&p=f&t=j9Cl4xy5obvW9O8l-0)
 
 Reflections:
 
+#Lara
 Please mention the requirements you met and which goals you achieved for this assignment.
 
+#Nnamdi
 🎯 Were there any requirements or goals that you were not quite able to achieve?
 
 🎯 If so, could you please tell us what was it that you found difficult about these tasks?
