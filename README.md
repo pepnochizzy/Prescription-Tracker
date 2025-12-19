@@ -84,5 +84,9 @@ Other sources used:
 - https://youtu.be/e_-fdmvIr4A?si=E5eat-JuMVEQKv6_
 - https://youtu.be/0JQASwPuNB0?si=MbukC1wvbGpsEUKb
 
+## Logo
+<img width="1170" height="1379" alt="calender week5" src="https://github.com/user-attachments/assets/532f09be-7295-4ff5-9cee-6f25030b4fe6" />
+
+
 References:
 Third-party APIs, CSS resets, icons, images...
