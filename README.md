@@ -76,6 +76,13 @@ Nnamdi
 What went really well and what could have gone better?
 Detailing useful external sources that helped you complete the assignment (e.g Youtube tutorials).
 Describing errors or bugs you encountered while completing your assignment.
+ - found creating the new pages with Vite was a struggle to begin with, I (Lara) watched a few videos:
+ - https://youtu.be/e60d_M-p8nc?si=aWIQjVJqKRYi7tCh
+ - https://youtu.be/STeKBm67l6M?si=eh0MclzsyIlU2ogQ
+ - In the end we found that the issue was the paths we were using in the viteConfigs file and after that, they worked as intended!
+Other sources used:
+- https://youtu.be/e_-fdmvIr4A?si=E5eat-JuMVEQKv6_
+- https://youtu.be/0JQASwPuNB0?si=MbukC1wvbGpsEUKb
 
 References:
 Third-party APIs, CSS resets, icons, images...
