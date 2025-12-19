@@ -1,8 +1,8 @@
 # Prescription-Tracker
 
 Project name: Prescription-Tracker
-Render link:
-Repo link:
+Render link: https://prescription-tracker-e1wk.onrender.com/ https://prescription-tracker-server.onrender.com/
+Repo link: https://github.com/pepnochizzy/Prescription-Tracker
 
 ### Team members: 
 Lara, Dylan, Nnamdi, Sinéad
