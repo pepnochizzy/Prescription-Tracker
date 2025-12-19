@@ -65,6 +65,9 @@ Screenshots saved in: [Figma](url)
       For the most part, we were able to maintain communication and follow our original plans. Our GitHub collaboration became very strong, we knew how to merge and pull appropriately alongside reviewing eachother's code.
       As a team we were able to provide solutions when group members asked for help.
 
+## Link to trello 
+(https://trello.com/b/stVUuv6n/prescription-tracker-week5)
+
 Nnamdi
 🎯 Were there any requirements or goals that you were not quite able to achieve?
 
