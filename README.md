@@ -90,3 +90,8 @@ Other sources used:
 
 References:
 Third-party APIs, CSS resets, icons, images...
+font awesome for icons and google fonts for our font. Both linked in HTML files/CSS files
+logo drawn by Lara
+Database link : https://supabase.com/dashboard/project/ipliflxnsrexlihnjfwj/database/schemas
+Database Schema : <img width="179" height="181" alt="6a1731cace5f131362cc54f8b342f204" src="https://github.com/user-attachments/assets/283a58c6-788f-42cf-80fd-0336b0f8ff5d" />
+
