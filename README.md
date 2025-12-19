@@ -70,8 +70,11 @@ Screenshots saved in: [Figma](url)
 
 Nnamdi
 🎯 Were there any requirements or goals that you were not quite able to achieve?
+As part of our website/app we planned on having our logo displayed at the top left corner of the screen
+there are some missing pages that which would complete the website/page for example "setting page" 
 
 🎯 If so, could you please tell us what was it that you found difficult about these tasks?
+As a team we worked well to produce a website/app that is functional and meets the client's expectations, the team needed more time include more pages, navigations, to iron out some debugging issues and carry out more test that each fuction is working as intended
 
 What went really well and what could have gone better?
 Detailing useful external sources that helped you complete the assignment (e.g Youtube tutorials).
